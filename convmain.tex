@@ -1,0 +1,105 @@
+\def\year{2018}\relax
+%File: formatting-instruction.tex
+\documentclass[fleqn,10pt]{wlscirep} %DO NOT CHANGE THIS
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{aaai18}  %Required
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+
+\usepackage{authblk} %Remove this if you plan to add author list
+% \frenchspacing  %Required
+% \setlength{\pdfpagewidth}{8.5in}  %Required
+% \setlength{\pdfpageheight}{11in}  %Required
+
+\usepackage{xcolor}
+%\usepackage{amsmath}
+%\usepackage{verbatim}
+%\usepackage{graphics}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{multirow}
+%Package to allow named referencing
+\usepackage{nameref}
+
+\usepackage{url}
+%%decrease spacing 
+\usepackage{times}
+\usepackage{comment}
+\usepackage{soul}
+
+\usepackage[symbol]{footmisc}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%
+%\newtheorem{thm}{Theorem}
+%\newtheorem{corr}{Corollary}    
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{pty}{Property}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\sj}[1]{\green{#1}}
+\newcommand{\ns}[1]{\red{#1}}
+\newcommand{\sv}[1]{\blue{#1}}
+\newcommand{\rd}[1]{\purple{#1}}
+
+%% Added to strikeout text /Sumithra
+\usepackage{soul}
+
+%% Added for notes inside the text
+\usepackage{todonotes}
+\newcommand{\remSV}[1]{\todo[color=lightgray]{{\scriptsize[SV] #1\par}}}
+\newcommand{\remSVi}[1]{\todo[color=lightgray,inline]{{\scriptsize[SV] #1\par}}}
+
+
+\newcounter{row}
+\makeatletter
+\@addtoreset{subfigure}{row}
+\makeatother
+
+
+%PDF Info Is Required:
+%\pdfinfo{
+%	/Title (2018 Formatting Instructions for Authors Using LaTeX)
+%	/Author (AAAI Press Staff)}
+\setcounter{secnumdepth}{0}  
+	% The file aaai.sty is the style file for AAAI Press 
+	% proceedings, working notes, and technical reports.
+	%
+	
+%\title{Support in suicide prevention forums: Quantifying structural properties of on-line supportive conversations}
+%\title{Universal signatures in online discussions about mental health}
+% \title{Online discussions about mental health in Reddit exhibit signatures of supportive conversations}
+%\title{On Macroscopic and Mesoscopic signatures of supportive conversations in online forums}
+\title{Analysing network structures of conversations in an online suicide support forum}
+%\title{Universal signatures in online discussions about suicides}
+
+\author{}
+
+\begin{abstract}
+Platforms like Reddit and Twitter offer internet users an opportunity to talk about diverse issues, including those pertaining to physical and mental health. 
+Some of these forums also function as a safe space for severely distressed mental health patients to get social support from peers. The online community platform Reddit's SuicideWatch is one example of an online forum dedicated specifically to people who suffer from suicidal thoughts, or who are concerned about people who might be at risk. It remains to be seen if these forums can be used to understand and model the nature of online social support, not least because of the noisy and informal nature of conversations. Moreover, understanding how a community of volunteering peers react to calls for help in cases of suicidal posts, would help to
+devise better tools for online mitigation of such episodes. In this paper, we propose an approach to characterise conversations in online forums. Using data from the SuicideWatch subreddit as a case study, we propose metrics at a macroscopic level -- measuring the structure of the entire conversation as a whole. We also develop a framework to measure structures in supportive conversations at a mesoscopic level
+-- measuring interactions with the immediate neighbours of the person in distress. We statistically show through comparison with baseline conversations from random Reddit threads that certain macro and meso-scale structures in an online conversation  exhibit signatures of social support, and are particularly over-expressed in SuicideWatch conversations. 
+\end{abstract}
+\begin{document}
+\flushbottom
+\maketitle
+
+
+\input{Sections/Introduction}
+\input{Sections/Results}
+\input{Sections/Discussion}
+\input{Sections/Methods}
+% \input{Sections/Appendix}
+
+
+\bibliography{replyGraphs}
+\end{document}
