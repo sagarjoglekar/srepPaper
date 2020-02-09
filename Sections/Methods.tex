@@ -24,9 +24,16 @@ We further clean the data, by removing threads where the root author has deleted
 \end{figure}
 
 \subsection{Abstractions} \label{sec:abstractions}
-To understand the dynamics of supportive conversations, develop two abstractions: 
+To understand the dynamics of supportive conversations, we develop two abstractions: 
 \subsubsection{Reply Graphs} \label{sec:reply_graphs}
-The first abstraction mimics directly the structure of conversation threads on Reddit with an abstraction we term as \textit{reply graphs}, and denote as $R = (P,E)$. The nodes $P$ consist of all the posts in the thread. The root post is labeled as $p_0 \in P$ and $k^{th}$ post in chronological order as $p_k \in P$. A directed edge ($p_i,p_j) \in E$ is drawn from $p_i$ to $p_j$ if $p_j$ is a reply to $p_i$. \ref{Fig:GraphExamples} (a) presents an example. Note that in platforms such as Reddit, where each response can only reply to one other post, reply graphs end up being reply \textit{trees}.
+%The first abstraction mimics directly
+To mimic
+the structure of conversation threads on Reddit 
+%with
+we define
+an abstraction 
+that
+we term as \textit{reply graphs}, and denote as $R = (P,E)$. The nodes $P$ consist of all the posts in the thread. The root post is labeled as $p_0 \in P$ and $k^{th}$ post in chronological order as $p_k \in P$. A directed edge ($p_i,p_j) \in E$ is drawn from $p_i$ to $p_j$ if $p_j$ is a reply to $p_i$. \ref{Fig:GraphExamples} (a) presents an example. Note that in platforms such as Reddit, where each response can only reply to one other post, reply graphs end up being reply \textit{trees}.
 % %The weight of the edge $E_{ij}$ is found by calculating the cosine similarity between semantic vector $V_i$ for post $P_i$ and the semantic vector $V_j$ of post $P_j$.  This abstraction works well in modeling the conversational nature of these forums.  
 % For convenience of the reader, we present a couple of example pairs from SW and Frontpage baseline datasets in Figure \ref{Fig:GraphExamples}
 
@@ -66,7 +73,11 @@ Node centrality is a metric that measures how central a node is in a network. We
 $$
 g(OP) = \sum_{s \neq v \neq t}\frac{\sigma_{st}(OP)}{\sigma_{st}}
 $$
-where $\sigma_{st}$ is the total number of shortest paths from node $s$ to node $t$ and $\sigma_{st}(OP)$ is the number of those paths that pass through $OP$. %To understand whether the thread starters ($OP$) have a special place in the network, we evaluate both centrality of the node corresponding to the $OP$, as well as median centrality across all the nodes in a user graph.
+where $\sigma_{st}$ is the total number of shortest paths from node $s$ to node $t$; 
+%and 
+$\sigma_{st}(OP)$ is the number of 
+%those 
+paths that pass through $OP$. %To understand whether the thread starters ($OP$) have a special place in the network, we evaluate both centrality of the node corresponding to the $OP$, as well as median centrality across all the nodes in a user graph.
 
 
 % \subsubsection{Semantic alignment} \label{sec:semantic_alignment}

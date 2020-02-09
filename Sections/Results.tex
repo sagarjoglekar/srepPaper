@@ -3,13 +3,13 @@
 \begin{figure*}[!ht]
     \centering
     \includegraphics[width=0.7\linewidth]{Figures/Pipeline.pdf}
-    \caption{A reddit thread is converted into the two forms of abstractions viz. Reply graphs and User interaction graphs. We then evaluate the macroscopic and mesoscopic metrics on these graphs, and evaluate statistical over or under representation of these metrics}
+    \caption{A reddit thread is converted into abstractions (Reply graphs and User interaction graphs). Macroscopic and mesoscopic analysis is performed on these graphs, and statistical over- or under- representation of these metrics is evaluated.}
     \label{fig:pipeline}
 \end{figure*}
 
 Reddit is a platform where a user can create a post or reply to a root post (RP) submitted by an original poster (OP) in a subreddit, and other reddit users can interact by posting at different levels of the thread, or by up or down voting posts. We analyzed RPs in the SuicideWatch subreddit (SW), building on the work of Gkotsis et al. \cite{gkotsis2017characterisation}.
 We crawled SW to get entire conversation threads,
-iteratively pursuing each conversation at progressively deeper levels of replies until the whole thread had been obtained\footnote{The code to crawl reddit for threads can be found at \textit{https://github.com/sagarjoglekar/redditTools}}. This resulted in a dataset of over 50,754 SW threads totaling in 419,555 individual posts. 
+iteratively pursuing each conversation at progressively deeper levels of replies until the whole thread had been obtained. The code to crawl reddit for threads can be found at \textit{https://github.com/sagarjoglekar/redditTools}. This resulted in a dataset of over 50,754 SW threads totaling in 419,555 individual posts. 
 To provide a baseline against which to compare nature of conversations on the SW sub-reddit, we acquired a similar number (49,773) of baseline threads from any other subreddit popular enough to land on the frontpage (FP). This resulted in a baseline dataset of 3,011,765 posts. Further details on how these were acquired are presented in the \nameref{section:methods} section. We compare the two corpora -- SW and FP -- at two scales: the first is a macroscopic analysis that considers features of entire threads; second we perform a mesoscopic analysis by considering local structural relations between nodes and their neighbours within user graphs corresponding to each thread. Our analysis finds several factors that distinguish SW conversations from FP conversations. %We show that some of these factors are over-expressed in SW conversations. We also show that certain properties of these conversations can be backed up by sociological theories of supportive conversations~\cite{epley_mind_2010}.
 \subsection{Macro Analysis of SW and FP Conversations}
  \begin{figure}[!h]
@@ -84,7 +84,6 @@ We find that anchored motif variants \textbf{021U-a, 021U-b, 111D-b, 111D-c, 201
 We look at the median completion times for 3 of the 5 over expressed motifs (021U-a, 111D-b and 201-b), by plotting the median age of the last established edge in the motif as a fraction of the entire lifetime of the thread (Figure \ref{fig:motif-progression}). These three motifs share a peculiar property in that they all have the OP at the apex (most central) position. We observe that as the time goes by, the symmetric edges between the OP and those who engage with them increases.  
 
 From previous studies on triadic structure, it was inferred that transitive triads are naturally more common than expected in social structures of apes and humans~\cite{shizuka2015network}. Interestingly, our analysis shows that transitive triads are rarer in SW, as compared with the FP conversations. 
-
 These patterns in local interactions indicate that conversations in SW tend to be more $OP$ centric, with non-transitive dialogues between the $OP$ and users who respond to their calls for help. As a consequence, the $OP$ tends to be highly central in the conversation as well as part of several mutual interactions. These behaviours are unique to SW, i.e., observed more in SW when compared with conversations on other subreddits (FP).  
 
 
