@@ -6,7 +6,7 @@ Building on the brief descriptions in the previous sections, here we provide a m
 \subsection{Datasets} \label{sec:data}
 The focus our work is the subreddit r/SuicideWatch. We study this using a seed dataset~\cite{gkotsis2017characterisation}, that consists of root posts from the subreddit r/SuicideWatch. Building on this dataset, we acquire the entire thread structure of all the root posts in the data by recursively obtaining all replies to the root posts, replies to those replies and so on, until we reach posts which do not have any further replies. This results in the acquisition of 50,754 threads from SuicideWatch (SW). To obtain a baseline of similar size for comparison purposes, we crawl the entire conversation threads of posts that appear on the front page of Reddit.com  for 2 weeks,  accumulating a second corpus (FP) of 49,773 reddit threads in the process. 
 %
-The two conversation datasets from r/SuicideWatch and Frontpage are very similar in terms of common summary statistics such as Degree distributions (see Appendix Fig.~\ref{fig:degdist}). 
+The two conversation datasets from r/SuicideWatch and Frontpage are very similar in terms of common summary statistics such as Degree distributions (see Fig.~\ref{fig:degdist}). 
 Owing to the long tailed nature of the datasets, we perform our analysis on threads  which have at least 5 posts in addition to the root post.
 We further clean the data, by removing threads where the root author has deleted their user account, which is a common practice to preserve anonymity in more controversial posts. The resulting dataset has 10,527 threads in SW and 11,070 threads in the baseline (FP). 
 

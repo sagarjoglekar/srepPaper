@@ -27,18 +27,18 @@ In contrast with previous studies which only looked at original posts on Suicide
 %Online communities, or fora, offer a platform for users to directly interact with each other. Reddit\footnote{\url{http://reddit.com/}} is one of the largest online communities which contains a number of sub-communities (so called \emph{subreddits}) that can deal with myriad of topics. On this platform, several sub-reddits are specifically tailored to mental health-related topics, such as \emph{depression}, \emph{anxiety} or \emph{alcoholism}. There are thousands of users on these communities, exchanging thoughts and asking for help. These forums offer a unique opportunity to study the way people describe or discuss their problems in their own voice. 
 Further, most previous studies have aimed at studying the \emph{content} of posts and their characteristics in relation to other posts. But an important aspect of online communities is their supportive \emph{function}, where users can turn to these platforms not only to express their thoughts and concerns, but also to receive support from the community. This support often manifests as an emergent conversation between many users and the one in distress. Hence here we propose a framework that captures the structure of a conversation thread and develop metrics that capture the \emph{macroscopic} properties of a conversation that involve the entire thread and the users participating in it as well as \emph{mesocopic} properties of a conversation that involve the immediate interactions with the one in distress. 
 
-\begin{table}
-	\resizebox{0.5\linewidth}{!}{
-		\begin{tabular}{l|p{8cm}}
-			\textbf{Terminology} & \textbf{stands for}\\
-			$RP$   & Root post which begins a new thread on a subreddit \\
-			$OP$  & Original poster who posts the Root post for a thread \\
-			$SW$ & The suicide watch Subreddit \\
-			$FP$  & Front page of Reddit. \\
-		\end{tabular}}
-	\caption{Notations and Terms.}
-    \label{notations}
-\end{table}
+%\begin{table}
+%	\resizebox{0.5\linewidth}{!}{
+%		\begin{tabular}{l|p{8cm}}
+%			\textbf{Terminology} & \textbf{stands for}\\
+%			$RP$   & Root post which begins a new thread on a subreddit \\
+%			$OP$  & Original poster who posts the Root post for a thread \\
+%			$SW$ & The suicide watch Subreddit \\
+%			$FP$  & Front page of Reddit. \\
+%		\end{tabular}}
+%	\caption{Notations and Terms.}
+%    \label{notations}
+%\end{table}
 
 To model the conversation structure, we represent conversations in a forum using two graph-based abstractions: \textit{User interaction graphs}, which model the user-to-user exchange of messages, and  \textit{reply graphs}, which capture the structure of the dialogue on the forum, see example in Figure \ref{Fig:GraphExamples}. The complete processing pipeline can be seen in Figure~\ref{fig:pipeline}. We describe the pipeline and the metrics in detail in the \nameref{section:methods} section.
 We then propose metrics that quantify the macroscopic structure of the two graphs we construct:
